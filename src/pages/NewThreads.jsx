@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "/src/index.css";
 import classes from "../styles/NewThreads.module.css";
+import { Helmet } from "react-helmet-async";
 const NewThreads = () => {
   const [title, setTitle] = useState("");
   const navigate = useNavigate();
@@ -25,27 +26,32 @@ const NewThreads = () => {
   };
 
   return (
-    <div className={classes.threadsWrapper}>
-      <h1 className={classes.threads_title}>スレッド新規作成</h1>
-      <div className={classes.formContainer}>
-        <form onSubmit={createThreads}>
-          <input
-            type="text"
-            required
-            className={classes.input}
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            placeholder="スレッドタイトルを入力してください"
-          />
-          <div className={classes.buttonContainer}>
-            <Link to="/" className={classes.backToButton}>
-              Topへ戻る
-            </Link>
-            <button className={classes.submit}>作成</button>
-          </div>
-        </form>
+    <>
+      <Helmet>
+        <title>Railway React掲示板｜スレッド新規作成</title>
+      </Helmet>
+      <div className={classes.threadsWrapper}>
+        <h1 className={classes.threads_title}>スレッド新規作成</h1>
+        <div className={classes.formContainer}>
+          <form onSubmit={createThreads}>
+            <input
+              type="text"
+              required
+              className={classes.input}
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              placeholder="スレッドタイトルを入力してください"
+            />
+            <div className={classes.buttonContainer}>
+              <Link to="/" className={classes.backToButton}>
+                Topへ戻る
+              </Link>
+              <button className={classes.submit}>作成</button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

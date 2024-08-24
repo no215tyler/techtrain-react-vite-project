@@ -1,11 +1,14 @@
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
   return (
     <>
       <div className="header">
-        <h2>掲示板</h2>
-        <a href="">スレッドを立てる</a>
+        <Link to="/">
+          <h2>掲示板</h2>
+        </Link>
+        <Link to="/threads/new">スレッドを立てる</Link>
       </div>
     </>
   );

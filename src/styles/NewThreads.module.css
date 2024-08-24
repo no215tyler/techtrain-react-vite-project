@@ -59,3 +59,9 @@ form {
 .submit:hover {
   background-color: #35d26a;
 }
+
+@media (max-width: 520px) {
+  form {
+    width: 80vw;
+  }
+}

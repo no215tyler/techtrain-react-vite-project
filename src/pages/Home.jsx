@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../App.css";
+import classes from "../styles/Home.module.css";
 
 const Home = () => {
   const [threads, setThreads] = useState([]);
@@ -25,15 +25,15 @@ const Home = () => {
 
   return (
     <>
-      <div className="main_container">
-        <div className="threads_countainer">
-          <h2 className="thread_title">新着スレッド</h2>
+      <div className={classes.main_container}>
+        <div className={classes.threads_countainer}>
+          <h2 className={classes.thread_title}>新着スレッド</h2>
           {err ? (
             <div>{err}</div>
           ) : (
             threads.map((thread, index) => {
               return (
-                <div key={index} className="thread">
+                <div key={index} className={classes.thread}>
                   {thread.title}
                 </div>
               );

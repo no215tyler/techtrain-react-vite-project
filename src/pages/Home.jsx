@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import classes from "../styles/Home.module.css";
 
 const Home = () => {
-  const [threads, setThreads] = useState([]);
+  const [threads, setThreads] = useState([{ title: "Loading..." }]);
   const [err, setErr] = useState(null);
   const fetchThreads = async () => {
     try {

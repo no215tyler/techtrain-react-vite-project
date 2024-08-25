@@ -36,7 +36,7 @@ const Home = () => {
               return (
                 <div key={index} className={classes.thread}>
                   <Link
-                    to={`/threads/${index + 1}`}
+                    to={`/threads/${thread.id}`}
                     className={classes.threadTitleColor}
                     state={{ thread }}
                   >

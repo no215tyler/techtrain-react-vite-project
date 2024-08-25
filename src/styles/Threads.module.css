@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow-y: scroll;
 }
 
 .commentWrapper {
@@ -55,5 +56,8 @@ textarea {
 @media (max-width: 499px) {
   .threadWrapper {
     padding: 0 8vw;
+  }
+  .threadTitle {
+    font-size: 15px;
   }
 }

@@ -27,6 +27,7 @@
   margin: 8px;
   padding: 12px;
   background-color: #ffffff;
+  white-space: pre-wrap;
 }
 
 textarea {

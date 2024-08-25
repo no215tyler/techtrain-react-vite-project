@@ -17,7 +17,7 @@ const Threads = () => {
 
   const postComment = async () => {
     if (addComment == "") {
-      alert("送信するには文字の入力が必要です。");
+      alert("投稿するには文字の入力が必要です。");
       return;
     }
     try {

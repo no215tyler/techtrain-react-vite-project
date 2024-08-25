@@ -18,6 +18,10 @@
   margin-bottom: 20px;
 }
 
+.threadTitleColor {
+  color: #000000;
+}
+
 .thread {
   height: 50px;
   width: 300px;

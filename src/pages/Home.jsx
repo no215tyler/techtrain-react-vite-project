@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import classes from "../styles/Home.module.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [threads, setThreads] = useState([{ title: "Loading..." }]);
@@ -34,7 +35,13 @@ const Home = () => {
             threads.map((thread, index) => {
               return (
                 <div key={index} className={classes.thread}>
-                  {thread.title}
+                  <Link
+                    to={`/threads/${index + 1}`}
+                    className={classes.threadTitleColor}
+                    state={{ thread }}
+                  >
+                    {thread.title}
+                  </Link>
                 </div>
               );
             })
